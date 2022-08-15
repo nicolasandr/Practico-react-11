@@ -1,10 +1,11 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Titulo from './components/Titulo'
 
 const App = () => {
     return (
-        <div className='container'>
-            <h1 className='display-1'>hola mundo</h1>
+        <div>
+            <Titulo></Titulo>
         </div>
     );
 };

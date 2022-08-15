@@ -1,0 +1,10 @@
+.bg-titulo{
+    background-color: rgb(24, 87, 182);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: antiquewhite;
+}
+
+.btn-color{
+  background-color: rgb(38, 98, 189); 
+}
