@@ -1,14 +1,14 @@
-import React from 'react';
-import Noticia from './Noticia';
+import React from "react";
+import Noticia from "./Noticia";
 
-const ListaNoticias = () => {
-    return (
-        <div className='row border'>
-            <div className='col-12 col-md-4 '>
-            <Noticia></Noticia>
-            </div>
-        </div>
-    );
+const ListaNoticias = (props) => {
+  return (
+    <div className="row border">
+      {props.arregloNoticias.map((item,posicion) => (
+        <Noticia key={posicion}  noticiaCargada={item} ></Noticia>
+      ))}
+    </div>
+  );
 };
 
 export default ListaNoticias;
