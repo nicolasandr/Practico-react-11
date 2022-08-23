@@ -15,32 +15,20 @@ const options = [
 
 const Formulario = () => {
     const [arregloNoticias, setArregloNoticias] = useState([]);
-    const [value, setvalueCategorias] = useState('');
+    const [categoria, setvalueCategorias] = useState('');
 
     const onDropdownChange = (e) => {
         setvalueCategorias(e.value);
-        consultarAPI();
-        fitrarNoticia();
-        
     };
     useEffect(() => {
         consultarAPI();
-    },[]);
+    }, [categoria]);
 
     const consultarAPI = async () => {
         const respuesta = await fetch(`
-         https://newsapi.org/v2/top-headlines/sources?apiKey=6624334bbfc14247b52fb14cfcf7fcee`);
+         https://newsapi.org/v2/top-headlines/sources?apiKey=6624334bbfc14247b52fb14cfcf7fcee&category=${categoria}`);
         const dato = await respuesta.json();
-        setArregloNoticias(dato.sources);
-        
-    };
-
-    const fitrarNoticia = () => {
-        let arregloNoticiasModif = arregloNoticias.filter((objeto) => {
-            return objeto.category === value;
-        });
-        setArregloNoticias(arregloNoticiasModif);
-        
+        setArregloNoticias(dato.sources); 
     };
 
     return (
