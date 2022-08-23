@@ -5,7 +5,7 @@ import '../App.css';
 const Titulo = () => {
     return (
         <div>
-            <h1 className='display-3 text-center bg-titulo'>Noticias</h1>
+            <h1 className="display-3 text-center bg-titulo">Noticias</h1>
             <Formulario></Formulario>
         </div>
     );

@@ -1,6 +1,6 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Titulo from './components/Titulo'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Titulo from './components/Titulo';
 
 const App = () => {
     return (
